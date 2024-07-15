@@ -30,7 +30,9 @@
 
 ### Installation
 
-1. Open the magic-transporters folder:
+1. Clone the repository:
+    git clone https://github.com/yasser-hamza/Magic-Transporters
+    cd magic-transporters
 
 2. Install dependencies:
 

@@ -5,5 +5,3 @@ export const addMagicItem = async (name: string, weight: number) => {
     await item.save();
     return item;
 };
-
-// Add more service methods as needed...

@@ -4,13 +4,11 @@ import bodyParser from 'body-parser';
 import { magicMoverRouter } from './../routes/magicMover';
 import mongoose from 'mongoose';
 
-// Connect to MongoDB in-memory server for testing
 beforeAll(async () => {
     const url = 'mongodb://127.0.0.1/magic_transporters_test';
     await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true } as mongoose.ConnectOptions);
 });
 
-// Clear all collections after each test
 afterEach(async () => {
     const collections = mongoose.connection.collections;
     for (const key in collections) {
@@ -19,7 +17,6 @@ afterEach(async () => {
     }
 });
 
-// Disconnect after all tests
 afterAll(async () => {
     await mongoose.connection.close();
 });

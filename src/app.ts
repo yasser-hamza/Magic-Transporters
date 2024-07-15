@@ -11,18 +11,15 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-// Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/magic_transporters', {
     appName: "Magic Transporters"
 } as mongoose.ConnectOptions).then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-// Define routes
 app.use('/magic-movers', magicMoverRouter);
 app.use('/magic-items', magicItemRouter);
 app.use('/missions', missionRouter);
 
-// Setup Swagger
 setupSwagger(app);
 
 app.listen(PORT, () => {

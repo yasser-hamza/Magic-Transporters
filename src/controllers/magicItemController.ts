@@ -44,5 +44,3 @@ export const addMagicItem = async (req: Request, res: Response) => {
         }
     }
 };
-
-// Add more controller methods as needed...
